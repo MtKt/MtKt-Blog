@@ -2,7 +2,8 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>MtKt's Blog</title>
+{% block head %}
+{% endblock %}
 <link href="https://fonts.googleapis.com/css?family=Fugaz+One" rel="stylesheet">
 <link href="{% static 'article/css/bootstrap.css' %}" rel='stylesheet' type='text/css' />
 <link rel="apple-touch-icon" sizes="57x57" href="../../static/article/images/Logo_a.png">
@@ -72,76 +73,20 @@
 		 </div>
 	 </div>
 </div>
-<!---->
-<div id="about" class="about">
-	 <div class="container">
-		 <div class="about-top">
-		 <h3>BlogPosts</h3>	  
-				 <div class="clearfix"></div>
-			 </div>
-		 </div>
-	 </div>
+
+{% block content %}
+{% endblock %}
+
 </div>
-<!---->
-<!---->
-<div class="blog-index">
-<div class="container">
-{% for article in article_list %}
-    {% autoescape off %}
-      <article>
-        <header>
-          <p class="meta">
-            <time pubdate="{{ article.pub_date }}" data-updated="{{ article.last_edit_date }}">
-              {{ article.pub_date|date:'M'|upper }}
-              {{ article.pub_date|date:"dS"|upper}}, {{ article.pub_date.year }}
-            </time>
-          </p><br/>
-          <h1 class="title-link">
-            <div style="color: #D0104C;">
-            <a href="{{ article.get_absolute_url }}"><b>{{ article.title }}</b></a>
-          </h1>
-        </header>
-        <blog-detail>
-        {{ article.display_html }}
-        </blog-detail>
-      </article>
-      <br/>
-      <i class="strp"></i>
-      
-    {% endautoescape %}
-{% endfor %} 
+</div>
 
-
-<!---->
-<ul class="pager">
-    {% if  page_obj.has_previous %}
-        <li class="previous">
-            <a href="?page={{page_obj.previous_page_number}}">&larr; Prev</a>
-        </li>
-    {% else %}
-        <li class="previous disabled">
-        </li>
-    {% endif %}
-
-
-    {% if  page_obj.has_next%}
-        <li class="next">
-            <a href="?page={{page_obj.next_page_number}}">Next &rarr;</a>
-        </li>
-    {% else %}
-        <li class="next disabled">
-        </li>
-    {% endif %}
-</ul>
-<!---->
 <div class="footer">
 		 <div class="copywrite">
 		   <p>Copyright &copy; 2017. MtKt. Some Rights Reserved.</p>
 		 </div>		 
 	 </div>
 </div>
-<!---->
-<!---->
+
 <script type="text/javascript" src="../../static/article/js/move-top.js"></script>
 <script type="text/javascript" src="../../static/article/js/easing.js"></script>
 	</script>
