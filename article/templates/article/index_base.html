@@ -1,5 +1,14 @@
 {%  extends 'article/base.html'%}
 
+
+{% block head %}
+<title>MtKt's Blog</title>
+{% endblock %}
+
+{% block cyuuni %}
+<p>{{cyuuni_byou.body}}<br/> - {{cyuuni_byou.by}}</p>
+{% endblock %}
+
 {%  block content  %}
 <div id="about" class="about">
    <div class="container">
@@ -32,7 +41,9 @@
         {{ article.display_html }}
         </blog-detail>
       </article>
+      <br/>
       <i class="strp"></i>
+      <br/>
       <br/>
     {% endautoescape %}
 {% endfor %} 

@@ -107,3 +107,18 @@ class Image(models.Model):
         return upload_to
     article = models.ForeignKey(Article, related_name='images', on_delete=models.CASCADE)
     image = models.ImageField(upload_to=get_upload_img_name)
+
+class Cyuuni(models.Model):
+    
+    STATUS = {
+        0:u'发布',
+        1:u'草稿',
+    }
+
+    body = models.TextField('咒文', blank=True)
+    by = models.CharField('吟唱者',max_length=300)
+    defi = models.TextField('释义',blank=True)
+    status = models.IntegerField('施法状态', default=0, choices=STATUS.items())
+
+    def __str__(self):
+        return self.body

@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.forms import TextInput, Textarea
-from .models import Article, Image, Category
+from .models import Article, Image, Category, Cyuuni
 from django.db import models
 from django import forms
 from django.core.files.base import ContentFile
@@ -62,4 +62,6 @@ class ArticleAdmin(admin.ModelAdmin):
 
 admin.site.register(Category)
 admin.site.register(Article, ArticleAdmin)
+admin.site.register(Cyuuni)
+
 

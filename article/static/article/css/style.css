@@ -7,10 +7,12 @@ html, body{
 	background: #F4F4F4;
 	/*background: #000 !important;
     color: #0f0 !important;
-    outline: solid #f00 1px !important;*/
-    width:100%;
+    outline: solid #f00 1px !important;
+    width:100%;*/
   overflow-x:hidden;
 }
+
+.div-inline{display:inline} 
 
 h1.b1,h2.b2,h3.b3 {
   margin-bottom:25px;
@@ -41,8 +43,6 @@ a#toTop{
 	min-height:416px;
 	    padding-left: 4em;
 		position:relative;
-
-
 }
 .banner-info {
 	position:absolute;
@@ -55,9 +55,8 @@ a#toTop{
 }
 .banner-info h2{
 	font-size:5em;
-    font-family: 'Fugaz One', cursive;
+  font-family: 'Fugaz One', cursive;
 	color:#D0104C;
-
 }
 
 .banner-info p:before {
@@ -67,7 +66,6 @@ a#toTop{
    font-family:georgia,serif;
    color:#D0104C;
 }
-
 
 .banner-info p{
 font-size:1.3em;
@@ -85,7 +83,7 @@ font-family:Helvitica,'ヒラギノ角ゴ Pro','冬青黑简体中文';
   display: inline-block;
 	color: #DDD;
   font-size: 35px;
-      text-decoration:none 
+  text-decoration:none;
 }
 .top-menu ul li{
 	display:block;
@@ -97,7 +95,7 @@ font-family:Helvitica,'ヒラギノ角ゴ Pro','冬青黑简体中文';
 	font-size:1em;
 	text-decoration:none;
 	background:#D0104C;
-	 font-family: 'Play-Regular';
+	font-family: 'Play-Regular';
 }
 .top-menu ul li a:hover{
 	background:#fff;
@@ -147,14 +145,15 @@ ul.nav1 {
 	margin-top: .5em;
 }
 .top-menu ul li a {
-	padding: 1em 0;
-    font-family:Helvitica,'ヒラギノ角ゴ Pro','冬青黑简体中文';
-    font-size: 0.7em;
+	padding: 0.8em 0;
+  font-family:Helvitica,'ヒラギノ角ゴ Pro','冬青黑简体中文';
+  font-size: 0.7em;
 }
 
 .side-menu{
 	position:fixed;
-	top:12%;
+	top:10%;
+  left: 5%;
 	z-index: 1;
 }
 .copyrights{
@@ -270,6 +269,21 @@ i.strp{
 	filter: alpha(opacity=0);
 }
 
+#timeline time {
+  color:#535953;
+  font-size:0.5em;
+  font-family: 'Fugaz One', cursive;
+  position: absolute;
+  top: 25%;
+  left: 8%;
+}
+
+#year {
+  font-size: 3em;
+  color:#373C38;
+  font-family: 'Fugaz One', cursive;
+}
+
 /*--responsive--*/
 @media (max-width: 1440px){
 .banner-info {
@@ -282,10 +296,15 @@ i.strp{
     left: 20%;
     width: 66%;
 }
+.banner {
+    min-height: 450px;
+}
 }
 
 @media (max-width: 1280px){
-
+.banner {
+    min-height: 400px;
+}
 }
 @media (max-width: 1080px){
 
@@ -294,7 +313,7 @@ i.strp{
 }
 
 .banner {
-    min-height: 350px;
+    min-height: 400px;
     padding-left: 2em;
 }
 .banner-info h2 {
@@ -315,7 +334,7 @@ i.strp{
 	.banner{
 	background:#03257e;
 	background-size:cover;
-	min-height:320px;
+	min-height:350px;
 	padding-left: 4em;
 	position:relative;
 }
@@ -349,6 +368,11 @@ i.strp{
     padding: 0.7em 0;
     font-size: 0.7em;
 }
+
+.banner {
+    min-height: 330px;
+    padding-left: 0em;
+}
 }
 
 
@@ -365,7 +389,7 @@ i.strp{
 }
 
 .banner {
-    min-height: 300px;
+    min-height: 320px;
     padding-left: 0em;
 }
 .logo{
@@ -395,7 +419,7 @@ i.strp{
 @media(max-width:640px){
 
 .banner{
-		min-height: 280px;
+		min-height: 290px;
 	}
 
 .banner-info h2 {
@@ -413,7 +437,7 @@ i.strp{
     font-size: 0.65em;
 }
 .banner-info{
-	top:35%;
+	top:28%;
 }
 }
 
@@ -469,6 +493,11 @@ i.strp{
 }
 span.menu {
     padding: 0.7em 0;
+}
+
+.banner-info {
+  position:absolute;
+    top: 25%;
 }
 .banner-info h2 {
     font-size: 2em;

@@ -4,64 +4,47 @@
 <title>MtKt's Blog-TimeLine</title>
 {% endblock %}
 
-{%  block content  %}
+{% block cyuuni %}
+<p>{{cyuuni_byou.body}}<br/> - {{cyuuni_byou.by}}</p>
+{% endblock %}
 
-<h3>文章归档：</h3>
-                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                    {% for year,months in date_archive %}
-                        <div class="panel panel-default">
-                            <div class="panel-heading" role="tab" id="heading{{ forloop.counter }}">
-                                <h4 class="panel-title">
-                                    <a role="button" data-toggle="collapse" data-parent="#accordion"
-                                       href="#collapse{{ forloop.counter }}"
-                                       aria-expanded="true" aria-controls="collapse{{ forloop.counter }}">
-                                        {{ year }} 年
-                                    </a>
-                                </h4>
-                            </div>
-                            <div id="collapse{{ forloop.counter }}" class="panel-collapse collapse in" role="tabpanel"
-                                 aria-labelledby="heading{{ forloop.counter }}">
-                                <div class="panel-body">
-                                    {% for month in months %}
-                                        <a href="{% url 'blog:archive' year month %}"><p>{{ month }} 月</p></a>
-                                    {% endfor %}
-                                </div>
-                            </div>
-                        </div>
-                    {% endfor %}
-                </div>
+{% block content %}
 
-
-<!---->
 <div id="about" class="about">
-   <div class="container">
-     <div class="about-top">
+  <div class="container">
+    <div class="about-top">
      <h3>TimeLine</h3>   
          <div class="clearfix"></div>
-       </div>
-     </div>
-   </div>
+    </div>
+  </div>
 </div>
-<!---->
-<div class="time-line">
+
+<div id="timeline">
 <div class="container">
-<div>
     <article role="article">
-      <div id="blog-archives">
-          {% for article in article_list %}
+      {% for year,articles in year_all %}
+      <div id='year'>
+      {{year}} 
+      </div id='year'>
+      </br></br>
+            {% for article in articles %}
             <article>
-              <h1>
-                <a href="{{ article.get_absolute_url }}">{{ article.title }}</a>
-              </h1>
+            <h1>
+            <div id='time'>
               <time datetime="{{ article.pub_date }}">
-                <span class="month">{{ article.pub_date|date:"M"|upper }}</span>
-                <span class="day">{{ article.pub_date.day }}</span>
-              </time>
+              <span class="month">{{ article.pub_date|date:"M"|upper }}</span>
+              <span class="day">{{ article.pub_date.day }}</span>
+              </time>       
+              <a href="{{ article.get_absolute_url }}">{{ article.title }}</a>
+            </h1>
             </article>
-          {% endfor %}
-      </div>
+          {% endfor %} 
+          </br>
+          <i class="strp"></i>
+          </br>
+        {% endfor %}
     </article>
+    </div>
 </div>
-</div class="timeline">
 <!---->
 {% endblock %}
