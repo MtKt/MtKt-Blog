@@ -284,6 +284,23 @@ i.strp{
   font-family: 'Fugaz One', cursive;
 }
 
+#cyuuni_detail h1{
+    font-size: 2.5em;
+    color:#d0104c;
+}
+#cyuuni_detail h2{
+
+    font-size: 2em;
+    color:#d0104c;
+    position: relative;
+    left: 80%;
+}
+
+#cyuuni_detail p{
+    color:#d0104c;
+}
+
+
 /*--responsive--*/
 @media (max-width: 1440px){
 .banner-info {
@@ -329,6 +346,8 @@ i.strp{
     font-size: 2em;
 }
 }
+
+
 
 @media (max-width: 991px){
 	.banner{
@@ -439,6 +458,18 @@ i.strp{
 .banner-info{
 	top:28%;
 }
+#cyuuni_detail h1{
+    font-size: 1.8em;
+    color:#d0104c;
+}
+#cyuuni_detail h2{
+
+    font-size: 1.5em;
+    color:#d0104c;
+    position: relative;
+    left: 80%;
+}
+
 }
 
 @media(max-width:480px){
@@ -525,6 +556,20 @@ i.strp {
 .copywrite p, .copywrite p a {
     font-size: 0.8em;
 }
+
+#cyuuni_detail h1{
+    font-size: 1.2em;
+    color:#d0104c;
+}
+#cyuuni_detail h2{
+
+    font-size: 1.1em;
+    color:#d0104c;
+    position: relative;
+    left: 80%;
+}
+
+
 }
 
 @media(max-width:320px){
@@ -599,6 +644,18 @@ i.strp {
     display: block;
     width: 2px;
     height: 33px;
+}
+
+#cyuuni_detail h1{
+    font-size: 1.2em;
+    color:#d0104c;
+}
+#cyuuni_detail h2{
+
+    font-size: 1.1em;
+    color:#d0104c;
+    position: relative;
+    left: 80%;
 }
 
 }
