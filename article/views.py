@@ -24,7 +24,6 @@ class IndexView(BaseMixIn,ListView):
         article_list = Article.objects.filter(article_status=0).order_by("-pub_date")
         return article_list
 
-
 class ArticleView(BaseMixIn,DetailView):
     template_name = 'article/article.html'
     model = Article
@@ -76,18 +75,18 @@ class CategoryView(BaseMixIn,TemplateView):
         context['category_f'] = category_f
         return context
 
-
 class AboutView(BaseMixIn,TemplateView):
     template_name = 'article/about.html'
 
-class CyuuniDetail(BaseMixIn,DetailView):
-    template_name = 'article/cyuuni.html'
-    model = Cyuuni
-    context_object_name = 'cyuuni_byou'
-    pk_url_kwarg = 'cyuuni_id'
-
+#class CyuuniDetail(BaseMixIn,DetailView):
+#    template_name = 'article/cyuuni.html'
+#    model = Cyuuni
+#    context_object_name = 'cyuuni_byou'
+#    pk_url_kwarg = 'cyuuni_id'
 
 def cyuuni_detail(request, *cyuuni_id):
     cyuuni_byou = Cyuuni.objects.filter(status=0).order_by('?').first()
     args = {'cyuuni_byou':cyuuni_byou}
     return render(request, 'article/cyuuni.html', args)
+
+        

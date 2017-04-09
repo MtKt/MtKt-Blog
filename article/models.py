@@ -120,5 +120,9 @@ class Cyuuni(models.Model):
     defi = models.TextField('释义',blank=True)
     status = models.IntegerField('施法状态', default=0, choices=STATUS.items())
 
+    def get_absolute_url(self):
+        return reverse('cyuuni_s:cyuuni_s',
+                       kwargs={'cyuuni_id': self.id})
+
     def __str__(self):
         return self.body
