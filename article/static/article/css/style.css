@@ -470,6 +470,27 @@ i.strp{
     left: 80%;
 }
 
+#timeline time {
+  color:#535953;
+  font-size:0.3em;
+  font-family: 'Fugaz One', cursive;
+  position: absolute;
+  top: 25%;
+  left: 8%;
+}
+
+#timeline h1{
+
+  font-size: 1.3em;
+
+}
+
+#year {
+  font-size: 3em;
+  color:#373C38;
+  font-family: 'Fugaz One', cursive;
+}
+
 }
 
 @media(max-width:480px){
