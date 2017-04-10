@@ -78,7 +78,7 @@ font-family:Helvitica,'ヒラギノ角ゴ Pro','冬青黑简体中文';
 
 .logo a {
   background: url(../images/logo.png) no-repeat center;
-	background-size:65%;
+  background-size: 100%;
   padding: 2em 0.4em;
   display: inline-block;
 	color: #DDD;
