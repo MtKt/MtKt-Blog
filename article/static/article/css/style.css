@@ -12,6 +12,10 @@ html, body{
   overflow-x:hidden;
 }
 
+#cyuuni_banner{
+  text-align: right;
+}
+
 .div-inline{display:inline} 
 
 h1.b1,h2.b2,h3.b3 {
@@ -67,7 +71,16 @@ a#toTop{
    color:#D0104C;
 }
 
-.banner-info p{
+.banner-info p {
+font-size:1.3em;
+line-height:1.7em;
+width:90%;
+margin:0.8em auto;
+color:#D0104C;
+font-family:Helvitica,'ヒラギノ角ゴ Pro','冬青黑简体中文';
+}
+
+#cyuuni_banner {
 font-size:1.3em;
 line-height:1.7em;
 width:90%;
@@ -287,17 +300,15 @@ i.strp{
 #cyuuni_detail h1{
     font-size: 2.5em;
     color:#d0104c;
+    font-family: Palatino,Georgia,Cambria,'宋体-简','华文中宋','宋体',serif;
+
 }
 #cyuuni_detail h2{
 
     font-size: 2em;
     color:#d0104c;
     position: relative;
-    left: 80%;
-}
-
-#cyuuni_detail p{
-    color:#d0104c;
+    text-align:right;
 }
 
 
@@ -370,6 +381,10 @@ i.strp{
 	font-size:0.9em;
 }
 
+#cyuuni_banner p{
+  font-size:0.9em;
+}
+
 .top-menu ul li a {
     padding: 0.7em 0;
     font-size: 0.75em;
@@ -433,6 +448,10 @@ i.strp{
     font-size: 0.85em;
     width: 100%;
 }
+#cyuuni_banner {
+    font-size: 0.85em;
+    width: 100%;
+}
 }
 
 @media(max-width:640px){
@@ -448,6 +467,9 @@ i.strp{
 .banner-info p {
     font-size: 0.8em;
 }
+#cyuuni_banner{
+    font-size: 0.8em;
+}
 .logo a {
     font-size: 0.45em;
 }
@@ -459,15 +481,16 @@ i.strp{
 	top:28%;
 }
 #cyuuni_detail h1{
-    font-size: 1.8em;
+    font-size: 1.3em;
     color:#d0104c;
 }
 #cyuuni_detail h2{
 
-    font-size: 1.5em;
+    font-size: 1.05em;
     color:#d0104c;
     position: relative;
-    left: 80%;
+    text-align:right;
+
 }
 
 #timeline time {
@@ -565,6 +588,9 @@ span.menu {
 .banner-info p {
     font-size: 0.7em;
 }
+#cyuuni_banner {
+    font-size: 0.7em;
+}
 .logo a {
     font-size: 0.4em;
 }
@@ -584,10 +610,11 @@ i.strp {
 }
 #cyuuni_detail h2{
 
-    font-size: 1.1em;
+    font-size: 1em;
     color:#d0104c;
     position: relative;
-    left: 80%;
+    text-align:right;
+
 }
 
 
@@ -643,6 +670,10 @@ i.strp {
 .banner-info p {
     font-size: 1.05em;
 }
+#cyuuni_banner{
+    font-size: 1.05em;
+}
+
 .banner {
     min-height: 300px;
     background: #03257e;
@@ -676,7 +707,8 @@ i.strp {
     font-size: 1.1em;
     color:#d0104c;
     position: relative;
-    left: 80%;
+    text-align:right;
+
 }
 
 }
