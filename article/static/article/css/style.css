@@ -80,7 +80,7 @@ color:#D0104C;
 font-family:Helvitica,'ヒラギノ角ゴ Pro','冬青黑简体中文';
 }
 
-#cyuuni_banner {
+#cyuuni_banner h5{
 font-size:1.3em;
 line-height:1.7em;
 width:90%;
@@ -203,21 +203,6 @@ ul.nav1 {
 }
 .copy-rights ul li a  span.pin {
   background-position:-178px -2px;
-}
-.copy-rights ul li a  span.fa:hover {
-  background-position:-2px -43px;
-}
-.copy-rights ul li a span.tw:hover {
-  background-position: -42px -43px;
-}
-.copy-rights ul li a span.g:hover {
-  background-position:-88px -45px;
-}
-.copy-rights ul li a span.in:hover {
-  background-position: -131px -45px;
-}
-.copy-rights ul li a span.pin:hover {
-  background-position:-176px -46px;
 }
 .copy-rights ul li span{
   background:url(../images/ftr-icons.png)no-repeat;
@@ -381,7 +366,7 @@ i.strp{
 	font-size:0.9em;
 }
 
-#cyuuni_banner p{
+#cyuuni_banner h5{
   font-size:0.9em;
 }
 
@@ -448,7 +433,7 @@ i.strp{
     font-size: 0.85em;
     width: 100%;
 }
-#cyuuni_banner {
+#cyuuni_banner h5{
     font-size: 0.85em;
     width: 100%;
 }
@@ -467,7 +452,7 @@ i.strp{
 .banner-info p {
     font-size: 0.8em;
 }
-#cyuuni_banner{
+#cyuuni_banner h5{
     font-size: 0.8em;
 }
 .logo a {
@@ -544,21 +529,6 @@ i.strp{
 .copy-rights ul li a span.pin {
     background-position: -149px -2px;
 }
-.copy-rights ul li a span.fa:hover {
-    background-position: -2px -37px;
-}
-.copy-rights ul li a span.tw:hover {
-  background-position: -37px -36px;
-}
-.copy-rights ul li a span.g:hover {
-  background-position:-73px -38px;
-}
-.copy-rights ul li a span.in:hover {
-  background-position: -111px -37px;
-}
-.copy-rights ul li a span.pin:hover {
-  background-position:-149px -40px;
-}
 
 .banner{
 	background:#03257e;
@@ -588,7 +558,7 @@ span.menu {
 .banner-info p {
     font-size: 0.7em;
 }
-#cyuuni_banner {
+#cyuuni_banner h5{
     font-size: 0.7em;
 }
 .logo a {
@@ -641,21 +611,6 @@ i.strp {
 .copy-rights ul li a span.pin {
     background-position: -149px -2px;
 }
-.copy-rights ul li a span.fa:hover {
-    background-position: -2px -37px;
-}
-.copy-rights ul li a span.tw:hover {
-  background-position: -37px -36px;
-}
-.copy-rights ul li a span.g:hover {
-  background-position:-73px -38px;
-}
-.copy-rights ul li a span.in:hover {
-  background-position: -111px -37px;
-}
-.copy-rights ul li a span.pin:hover {
-  background-position:-149px -40px;
-}
 
 .banner-info p:before {
    font-size:20px;
@@ -670,7 +625,7 @@ i.strp {
 .banner-info p {
     font-size: 1.05em;
 }
-#cyuuni_banner{
+#cyuuni_banner h5{
     font-size: 1.05em;
 }
 

@@ -19,9 +19,7 @@
      </div>
    </div>
 </div>
-<div class="blog-index">
 <div class="container">
-<!---->
 {% for article in article_list %}
     {% autoescape off %}
       <article>
@@ -37,9 +35,9 @@
             <a href="{{ article.get_absolute_url }}"><b>{{ article.title }}</b></a>
           </h1>
         </header>
-        <blog-detail>
+        <div class=blog-detail>
         {{ article.display_html }}
-        </blog-detail>
+        </div>
       </article>
       <br/>
       <i class="strp"></i>
