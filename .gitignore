@@ -1,0 +1,9 @@
+db.sqlite3
+article/migrations/*
+article/static/admin/*
+*.pyc
+*.swp
+*.swo
+.idea
+.DS_Store
+media/*
