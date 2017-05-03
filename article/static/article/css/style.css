@@ -12,10 +12,6 @@ html, body{
   overflow-x:hidden;
 }
 
-#cyuuni_banner{
-  text-align: right;
-}
-
 .div-inline{display:inline} 
 
 h1.b1,h2.b2,h3.b3 {
@@ -71,27 +67,29 @@ a#toTop{
    color:#D0104C;
 }
 
-.banner-info p {
+.banner-info p{
 font-size:1.3em;
 line-height:1.7em;
 width:90%;
 margin:0.8em auto;
 color:#D0104C;
 font-family:Helvitica,'ヒラギノ角ゴ Pro','冬青黑简体中文';
+font-weight:bold;
 }
-
 #cyuuni_banner h5{
-font-size:1.3em;
-line-height:1.7em;
-width:90%;
-margin:0.8em auto;
-color:#D0104C;
-font-family:Helvitica,'ヒラギノ角ゴ Pro','冬青黑简体中文';
+  font-size:1.3em;
+  line-height:1.7em;
+  width:90%;
+  margin:0.8em auto;
+  color:#D0104C;
+  font-family:Helvitica,'ヒラギノ角ゴ Pro','冬青黑简体中文';
+  text-align:right;
+  font-weight:normal;
 }
 
 .logo a {
-  background: url(../images/logo.png) no-repeat center;
-  background-size: 100%;
+  background: url(../images/Logo.png) no-repeat center;
+	background-size:100%;
   padding: 2em 0.4em;
   display: inline-block;
 	color: #DDD;
@@ -286,15 +284,15 @@ i.strp{
     font-size: 2.5em;
     color:#d0104c;
     font-family: Palatino,Georgia,Cambria,'宋体-简','华文中宋','宋体',serif;
-
 }
 #cyuuni_detail h2{
 
-    font-size: 2em;
+    font-size: 1.9em;
     color:#d0104c;
     position: relative;
     text-align:right;
 }
+
 
 
 /*--responsive--*/
@@ -369,7 +367,6 @@ i.strp{
 #cyuuni_banner h5{
   font-size:0.9em;
 }
-
 .top-menu ul li a {
     padding: 0.7em 0;
     font-size: 0.75em;
@@ -391,6 +388,17 @@ i.strp{
 .banner {
     min-height: 330px;
     padding-left: 0em;
+}
+#cyuuni_detail h1{
+    font-size: 1.5em;
+    color:#d0104c;
+}
+#cyuuni_detail h2{
+
+    font-size: 1.05em;
+    color:#d0104c;
+    position: relative;
+    text-align:right;
 }
 }
 
@@ -433,10 +441,12 @@ i.strp{
     font-size: 0.85em;
     width: 100%;
 }
+
 #cyuuni_banner h5{
     font-size: 0.85em;
     width: 100%;
 }
+
 }
 
 @media(max-width:640px){
@@ -452,9 +462,11 @@ i.strp{
 .banner-info p {
     font-size: 0.8em;
 }
+
 #cyuuni_banner h5{
     font-size: 0.8em;
 }
+
 .logo a {
     font-size: 0.45em;
 }
@@ -475,7 +487,6 @@ i.strp{
     color:#d0104c;
     position: relative;
     text-align:right;
-
 }
 
 #timeline time {
@@ -498,6 +509,7 @@ i.strp{
   color:#373C38;
   font-family: 'Fugaz One', cursive;
 }
+
 
 }
 
@@ -558,9 +570,11 @@ span.menu {
 .banner-info p {
     font-size: 0.7em;
 }
+
 #cyuuni_banner h5{
     font-size: 0.7em;
 }
+
 .logo a {
     font-size: 0.4em;
 }
@@ -584,8 +598,8 @@ i.strp {
     color:#d0104c;
     position: relative;
     text-align:right;
-
 }
+
 
 
 }
@@ -612,10 +626,6 @@ i.strp {
     background-position: -149px -2px;
 }
 
-.banner-info p:before {
-   font-size:20px;
-}
-
 .logo a {
     font-size: 0.2em;
 }
@@ -623,10 +633,11 @@ i.strp {
     font-size: 2em;
 }
 .banner-info p {
-    font-size: 1.05em;
+    font-size: 0.85em;
 }
+
 #cyuuni_banner h5{
-    font-size: 1.05em;
+    font-size: 0.85em;
 }
 
 .banner {
@@ -663,7 +674,6 @@ i.strp {
     color:#d0104c;
     position: relative;
     text-align:right;
-
 }
 
 }

@@ -20,20 +20,21 @@
    </div>
 </div>
 <div class="container">
+<!---->
 {% for article in article_list %}
     {% autoescape off %}
       <article>
         <header>
-          <p class="meta">
-            <time pubdate="{{ article.pub_date }}" data-updated="{{ article.last_edit_date }}">
-              {{ article.pub_date|date:'M'|upper }}
-              {{ article.pub_date|date:"dS"|upper}}, {{ article.pub_date.year }}<br/>✎{{article.category}}
-            </time>
-          </p><br/>
           <h1 class="title-link">
             <div style="color: #D0104C;">
             <a href="{{ article.get_absolute_url }}"><b>{{ article.title }}</b></a>
           </h1>
+          <p class="meta">
+            <time pubdate="{{ article.pub_date }}" data-updated="{{ article.last_edit_date }}">
+              {{ article.pub_date|date:'M'|upper }}
+              {{ article.pub_date|date:"dS"|upper}}, {{ article.pub_date.year }}<br/>{{article.author}}, ✎{{article.category}}
+            </time>
+          </p><br/>
         </header>
         <div class=blog-detail>
         {{ article.display_html }}

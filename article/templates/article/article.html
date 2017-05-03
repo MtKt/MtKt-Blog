@@ -17,20 +17,18 @@
           <br/><br/>
       <article>
         <header>
-          <p class="meta">
-          <br/>
-            <time pubdate="{{ article.pub_date }}" data-updated="{{ article.last_edit_date }}">
-              {{ article.pub_date|date:'M'|upper }}
-              {{ article.pub_date|date:"dS"|upper}}, {{ article.pub_date.year }}
-              <br/>{{article.category}}
-            </time>
-          </p><br/>
           <h1 class="title-link">
             <div style="color: #D0104C;">
             <b>{{ article.title }}</b>
           </h1>
-          <br/>
-        </header>
+          <p class="meta">
+            <time pubdate="{{ article.pub_date }}" data-updated="{{ article.last_edit_date }}">
+              {{ article.pub_date|date:'M'|upper }}
+              {{ article.pub_date|date:"dS"|upper}}, {{ article.pub_date.year }}
+              <br/>{{article.author}}, ✎{{article.category}}
+            </time>
+          </p>
+        </header><br/>
         <div class=blog-detail>
         {{ article.display_html }}
         </div>

@@ -1,4 +1,4 @@
-.blog-detail
+blog-index 
 {
   font-family: 'Palatino', Georgia, "宋体", Heiti, "黑体", arial, serif;
   font-size: 40px;
@@ -47,7 +47,7 @@ a.anchor {
   -webkit-font-smoothing: antialiased;
   cursor: text;
   position: relative; }
-
+ 
 h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
   background: url("../images/para.png") no-repeat 10px center;
   text-decoration: none; }
@@ -62,7 +62,7 @@ p>code, li>code {   /* from Paul Irish's blog */
     background: #f0f0f0;
     font-size: .8em;
     line-height: 1.2em;
-    color: #2F4F4F;
+    color: #0f2540;
     border: 1px solid #ddd;
     -webkit-border-radius: .4em;
     -moz-border-radius: .4em;
@@ -353,25 +353,26 @@ pre code, pre tt {
 }
 
 .meta{
-  font-size: 18px}
-  
+  font-size: 18px;
+  text-align: center;
 }
-
+.blog-detail p{
+margin: 20px 8px 20px 8px;
+}  
 
 @media (max-width: 768px){
 
 .blog-index h1{
-  font-size: 1.2em;
+  font-size: 1.4em;
 }
 .blog-index h2{
 font-size: 1.1em;
 }
 .blog-index h3{
-font-size: 0.9em;
+font-size: 1.05em;
 }
 .blog-index h4,h5,h6,p,blockquote, ul, ol, dl, li{
-font-size: 0.9em;
-margin: 20px;
+font-size: 1.05em;
 }
 .meta{
   font-size:0.8em;}
@@ -383,20 +384,19 @@ margin: 20px;
   font-size: 1.1em;
 }
 .blog-index h2{
-font-size: 0.9em;
+font-size: 1.05em;
 }
 .blog-index h3{
-font-size: 0.9em;
+font-size: 1.05em;
 }
 .blog-index h4,h5,h6,p,blockquote, ul, ol, dl, li{
-    margin: 20px;
-font-size: 0.9em;
+font-size: 1.05em;
 }
 .meta{
   font-size:0.8em;}
 }
 
 
-.blog-detail p{
-  margin: 20px;
-}
+
+
+
