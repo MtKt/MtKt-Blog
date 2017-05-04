@@ -8,6 +8,5 @@ urlpatterns = [
                 url(r'^about/$', views.AboutView.as_view(), name = 'about' ),
                 url(r'^timeline/$', views.TimeLine.as_view(), name = 'timeline'),
                 url(r'^category/$', views.CategoryView.as_view(),name = 'category'),
-                url(r'^cyuuni/$', views.cyuuni_detail, name = 'cyuuni'),
-                #url(r'^cyuuni/(?P<cyuuni_id>\d+)/$', views.CyuuniDetail.as_view(), name = 'cyuuni_s'),
+                url(r'^cyuuni/(?P<cyuuni_id>\w+)/$', views.cyuuni_detail, name ='cyuuni'),
               ]

@@ -6,7 +6,7 @@
 {% endblock %}
 
 {% block cyuuni %}
-<p>{{cyuuni_byou.body}}<br/></p><div id=cyuuni_banner><h5> - {{cyuuni_byou.by}}</h5></div>
+<a href="{{ cyuuni_byou.get_absolute_url }}"><p>{{cyuuni_byou.body}}<br/></p><div id=cyuuni_banner><h5> - {{cyuuni_byou.by}}</h5></div></a>
 {% endblock %}
 
 {%  block content  %}

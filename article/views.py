@@ -84,8 +84,11 @@ class AboutView(BaseMixIn,TemplateView):
 #    context_object_name = 'cyuuni_byou'
 #    pk_url_kwarg = 'cyuuni_id'
 
-def cyuuni_detail(request, *cyuuni_id):
-    cyuuni_byou = Cyuuni.objects.filter(status=0).order_by('?').first()
+def cyuuni_detail(request, cyuuni_id):
+    if cyuuni_id == 'rand':
+        cyuuni_byou = Cyuuni.objects.filter(status=0).order_by('?').first()
+    else:
+        cyuuni_byou = Cyuuni.objects.filter(status=0).get(id=cyuuni_id)
     args = {'cyuuni_byou':cyuuni_byou}
     return render(request, 'article/cyuuni.html', args)
 
