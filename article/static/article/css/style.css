@@ -53,6 +53,9 @@ a#toTop{
     font-family: 'Fugaz One', cursive;
 
 }
+.banner-info a:hover{
+  text-decoration: none;
+}
 .banner-info h2{
 	font-size:5em;
   font-family: 'Fugaz One', cursive;
@@ -66,7 +69,6 @@ a#toTop{
    font-family:georgia,serif;
    color:#D0104C;
 }
-
 .banner-info p{
 font-size:1.3em;
 line-height:1.7em;

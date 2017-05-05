@@ -70,9 +70,10 @@ class CategoryView(BaseMixIn,TemplateView):
         for article in article_list:
             category = article.category
             category_f[category].append(article)
-        category_f=sorted(category_f.items(),reverse=True)
+        #category_f=sorted(category_f.items(),reverse=True)
         context = super(CategoryView,self).get_context_data(**kwargs)
         context['category_f'] = category_f
+        context['article_list'] = article_list
         return context
 
 class AboutView(BaseMixIn,TemplateView):
