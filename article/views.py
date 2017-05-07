@@ -31,11 +31,6 @@ class ArticleView(BaseMixIn,DetailView):
     slug_field = 'slug'
     pk_url_kwarg = 'article_id'
 
-        
-#def ArticleView(request, slug, article_id):
-#    args = {'article': get_object_or_404(Article, pk=article_id)}
-#    return render(request, 'article/article.html', args)
-
 class TimeLine(BaseMixIn,TemplateView):
     template_name = 'article/timeline.html'
     def get_context_data(self,**kwargs):
@@ -51,39 +46,19 @@ class TimeLine(BaseMixIn,TemplateView):
         context['article_list'] = article_list
         return context
 
-#def TimeLine(request):
-#    model = Article
-#    article_list = Article.objects.filter(article_status=0).order_by("-pub_date")
-#    year_all = defaultdict(list)
-#    for article in article_list:
-#       year = article.pub_date.year
-#       year_all[year].append(article)
-#    year_all=sorted(year_all.items(),reverse=True)
-#    args = {'year_all':year_all,'article_list':article_list}
-#    return render(request, 'article/timeline.html', args)
-
-class CategoryView(BaseMixIn,TemplateView):
+class CategoryView(BaseMixIn,DetailView):
+    model = Category    
     template_name = 'article/category.html'
-    def get_context_data(self,**kwargs):
-        article_list = Article.objects.filter(article_status=0).order_by("-pub_date")
-        category_f = defaultdict(list)
-        for article in article_list:
-            category = article.category
-            category_f[category].append(article)
-        #category_f=sorted(category_f.items(),reverse=True)
-        context = super(CategoryView,self).get_context_data(**kwargs)
-        context['category_f'] = category_f
-        context['article_list'] = article_list
-        return context
+    context_object_name = 'category'
+    pk_url_kwarg = 'category_id'
+
+    def get_object(self, queryset=None):
+        obj = super(CategoryView, self).get_object()
+        obj.article = obj.article_set.all()
+        return obj 
 
 class AboutView(BaseMixIn,TemplateView):
     template_name = 'article/about.html'
-
-#class CyuuniDetail(BaseMixIn,DetailView):
-#    template_name = 'article/cyuuni.html'
-#    model = Cyuuni
-#    context_object_name = 'cyuuni_byou'
-#    pk_url_kwarg = 'cyuuni_id'
 
 def cyuuni_detail(request, cyuuni_id):
     if cyuuni_id == 'rand':
@@ -91,6 +66,4 @@ def cyuuni_detail(request, cyuuni_id):
     else:
         cyuuni_byou = Cyuuni.objects.filter(status=0).get(id=cyuuni_id)
     args = {'cyuuni_byou':cyuuni_byou}
-    return render(request, 'article/cyuuni.html', args)
-
-        
+    return render(request, 'article/cyuuni.html', args)    

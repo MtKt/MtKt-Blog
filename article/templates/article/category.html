@@ -21,14 +21,11 @@
 
 <div id="timeline">
 <div class="container">
-    <article role="article">
-      {% for category,articles in category_f %}
       <div id='year'>
-      {{category}} 
+      {{category.name}} 
       </div id='year'>
       </br></br>
-            {% for article in articles %}
-            <article>
+            {% for article in category.article %}
             <h1>
             <div id='time'>
               <time datetime="{{ article.pub_date }}">
@@ -37,12 +34,10 @@
               </time>       
               <a href="{{ article.get_absolute_url }}">{{ article.title }}</a>
             </h1>
-            </article>
           {% endfor %} 
           </br>
           <i class="strp"></i>
           </br>
-        {% endfor %}
     </article>
     </div>
 </div>

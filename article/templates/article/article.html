@@ -23,7 +23,7 @@
             <time pubdate="{{ article.pub_date }}" data-updated="{{ article.last_edit_date }}">
               {{ article.pub_date|date:'M'|upper }}
               {{ article.pub_date|date:"dS"|upper}}, {{ article.pub_date.year }}
-              <br/>{{article.author}}, ✎{{article.category}}
+              <br/>{{article.author}}, <a href="{{ article.category.get_absolute_url }}"><b>✎{{article.category.name}}</b></a>
             </time>
           </p>
         </header><br/>
