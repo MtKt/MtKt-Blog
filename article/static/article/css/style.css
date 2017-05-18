@@ -629,8 +629,14 @@ i.strp {
 }
 
 .logo a {
-    font-size: 0.2em;
+    font-size: 0.3em;
 }
+
+span.menu {
+    padding: 0.7em 0.7em;
+}
+
+
 .banner-info h1 {
     font-size: 2em;
 }
