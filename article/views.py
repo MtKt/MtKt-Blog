@@ -6,7 +6,6 @@ from django.http import HttpResponse, Http404
 from .models import Article,Cyuuni,Category
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.views.generic import ListView, DetailView, TemplateView
-from django.db.models import Q
 
 class BaseMixIn(object):
     def get_context_data(self,**kwargs):
